@@ -18,3 +18,11 @@ A decoder-only Transformer model built from scratch in PyTorch, trained on the L
 1.  **Install Dependencies:** `pip install torch tiktoken`
 2.  **Train the Model:** `python v2_token_model/gpt_token.py`
 3.  **Chat with the AI:** `python v2_token_model/chat_token.py`
+
+---
+
+## Phase 3: Fine-Tuning (Llama-3)
+* **Model:** Fine-tuned `unsloth/Llama-3.2-3B-Instruct` on the Linux Kernel dataset.
+* **Method:** Used LoRA (Low-Rank Adaptation) via the Unsloth library on a Tesla T4 GPU (Google Colab).
+* **Results:** The model successfully generates valid Linux Kernel syntax (headers, `static struct file_operations`, `kmalloc`) compared to the base model.
+* **Files:** The trained adapters are saved in the `linux_kernel_adapter/` folder.
